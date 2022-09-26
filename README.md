@@ -17,8 +17,11 @@
 -------------
 
 ## Команда проекта:
-[Skayzer8](https://github.com/Skayzer8)    
+    
+[Skayzer8](https://github.com/Skayzer8)
+    
 [Morimonster](https://github.com/Morimonster)
+    
 [Wozzi23](https://github.com/Wozzi23)   
 
 -------------
