@@ -17,8 +17,9 @@
 -------------
 
 ## Команда проекта:
-
-[Morimonster](https://github.com/Morimonster)   [Skayzer8](https://github.com/Skayzer8)    [Wozzi23](https://github.com/Wozzi23)
+[Skayzer8](https://github.com/Skayzer8)    
+[Morimonster](https://github.com/Morimonster)
+[Wozzi23](https://github.com/Wozzi23)   
 
 -------------
 
@@ -52,25 +53,43 @@
     Django 2.2
     Django Rest Framework
     Simple-JWT
-    SQLite
+    PostgreSQL
+    Docker
+    Gunicorn
+    Nginx
 
 -------------
 
 ## Установка
 
 1. Clone the repository to your PC:
-    - git clone git@github.com:Skayzer8/api_yamdb.git
-2. Go to the project directory, create and activate VENV:
-    - cd api_yamdb
-    - python3 -m venv env
-    - source venv/bin/activate
-3. Install requirements:
-    - pip install -r requirements.txt
-4. Perform migrations:
-    - cd api_yamdb
-    - python3 manage.py migrate
-5. run server and enjoy!:
-    - python3 manage.py runserver
+    - git@github.com:Skayzer8/infra_sp2.git
+2. Go to the project directory:
+    - cd infra_sp2
+3. Add .env file in the infra/ directory and describe next variables:
+    DB_ENGINE=django.db.backends.postgresql
+    DB_NAME= name your database
+    POSTGRES_USER= login DB's user
+    POSTGRES_PASSWORD= password DB's user
+    DB_HOST=db
+    DB_PORT=5432
+    SECRET_KEY='django-token'
+4. Go to the infra directory and compose image (need docker-compose):
+    - cd infra
+    - docker-compose up -d --build
+5. After launch, in additional terminal run next commands:
+    5.1. Perform migrations:
+        - docker-compose exec web python manage.py migrate
+    5.2. Collect static your project:
+        - docker-compose exec web python manage.py collectstatic --no-input
+    5.3. Create superuser your project:
+        - docker-compose exec web python manage.py createsuperuser
+
+Аfter all the steps, the project is available at:
+http://127.0.0.1
+
+Admin panel available at:
+http://127.0.0.1/admin/
 
 -------------
 
