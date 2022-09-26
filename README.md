@@ -63,17 +63,25 @@
 ## Установка
 
 1. Clone the repository to your PC:
-    - git@github.com:Skayzer8/infra_sp2.git
+    - git@github.com:skayzer8/infra_sp2.git
 2. Go to the project directory:
     - cd infra_sp2
 3. Add .env file in the infra/ directory and describe next variables:
+    
     DB_ENGINE=django.db.backends.postgresql
+    
     DB_NAME= name your database
+    
     POSTGRES_USER= login DB's user
+    
     POSTGRES_PASSWORD= password DB's user
+    
     DB_HOST=db
+    
     DB_PORT=5432
+    
     SECRET_KEY='django-token'
+    
 4. Go to the infra directory and compose image (need docker-compose):
     - cd infra
     - docker-compose up -d --build
