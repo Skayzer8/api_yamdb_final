@@ -1,0 +1,11 @@
+# ignore directories
+**/.pytest_cache/*
+**/.__pycache__/*
+**/tests/*
+**/readme_static/*
+# ignore files
+**/*.pyc
+**/*.md
+**/*.gitignore
+**/*.git
+
