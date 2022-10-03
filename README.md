@@ -66,9 +66,9 @@
 ## Установка
 
 1. Clone the repository to your PC:
-    - git@github.com:skayzer8/infra_sp2.git
+    - git@github.com:Skayzer8/api_yamdb_final.git
 2. Go to the project directory:
-    - cd infra_sp2
+    - cd api_yamdb_final
 3. Add .env file in the infra/ directory and describe next variables:
     
     DB_ENGINE=django.db.backends.postgresql
